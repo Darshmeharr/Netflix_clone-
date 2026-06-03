@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Clone</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#141414;
+    color:white;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    position:absolute;
+    width:100%;
+    z-index:100;
+}
+
+.logo{
+    color:#e50914;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.signin-btn{
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1920') center/cover;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.overlay h1{
+    font-size:4rem;
+    max-width:800px;
+}
+
+.overlay p{
+    margin:20px 0;
+    font-size:1.3rem;
+}
+
+.get-started{
+    background:#e50914;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:1rem;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* Movies Section */
+.movies{
+    padding:50px;
+}
+
+.movies h2{
+    margin-bottom:20px;
+}
+
+.movie-row{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.movie-row::-webkit-scrollbar{
+    display:none;
+}
+
+.movie-card{
+    min-width:250px;
+    height:150px;
+    border-radius:8px;
+    overflow:hidden;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.movie-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.movie-card:hover{
+    transform:scale(1.08);
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#999;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .overlay h1{
+        font-size:2.2rem;
+    }
+
+    .movie-card{
+        min-width:180px;
+        height:110px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">NETFLIX</div>
+    <button class="signin-btn">Sign In</button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="overlay">
+        <h1>Unlimited Movies, TV Shows and More</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <button class="get-started" onclick="showMessage()">Get Started</button>
+    </div>
+</section>
+
+<!-- Trending -->
+<section class="movies">
+    <h2>Trending Now</h2>
+
+    <div class="movie-row">
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1011/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1015/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1016/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1021/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1025/500/300">
+        </div>
+
+    </div>
+</section>
+
+<!-- Popular -->
+<section class="movies">
+    <h2>Popular on Netflix</h2>
+
+    <div class="movie-row">
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1035/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1040/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1041/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1042/500/300">
+        </div>
+
+        <div class="movie-card">
+            <img src="https://picsum.photos/id/1043/500/300">
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Netflix Clone | Front-End Project
+</footer>
+
+<script>
+function showMessage(){
+    alert("Welcome to the Netflix Clone!");
+}
+</script>
+
+</body>
+</html>
